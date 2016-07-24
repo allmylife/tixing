@@ -1,0 +1,277 @@
+body,
+ul,
+li,
+p,
+form,
+input,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body,
+html {
+  height: 100%;
+  font-family: "微软雅黑";
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.contain {
+  height: 100%;
+  margin-left: 400px;
+}
+.contain .left {
+  float: left;
+  background: #383836;
+  height: 100%;
+  width: 400px;
+  margin-left: -400px;
+  overflow-y: auto;
+}
+.contain .left .title {
+  background: #383836;
+  position: fixed;
+  height: 44px;
+  width: 400px;
+  border-bottom: 1px solid #1a1a1a;
+}
+.contain .left .logo {
+   margin-left: 10px;
+   font-size: 18px;
+  color: #fff;
+  line-height: 44px;
+}
+.contain .left .title .add {
+  position: relative;
+  float: right;
+  height: 23px;
+  line-height: 44px;
+  width: 23px;
+  margin-top: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.contain .left .add span:nth-child(1) {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 10px;
+}
+.contain .left .add span:nth-child(2) {
+  display: inline-block;
+  width: 1px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  right: 12px;
+}
+.content{
+  width:100%;
+  height: auto;
+  padding-top: 44px;
+  overflow-y:auto;
+  
+}
+.list{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #2a2a2a;
+}
+.list .dian{
+  float: left;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: orange;
+  margin: 14px;
+}
+.list .nr{
+  float: left;
+  line-height: 44px;
+  /*margin-left: 45px;*/
+  height: 44px;
+  color: #fff;
+  
+}
+
+.right{
+  float: right;
+  width: 100%;
+  height: 100%;
+}
+.right .top{
+  width: 100%;
+  height: 43px;
+  border: 1px solid #D2D2D2;
+}
+.top input{
+  border: 0;
+  height: 43px;
+  width: 100%;
+}
+.right .bottom{
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 15px;
+  box-sizing:border-box;
+}
+.tou{
+  border-bottom: 1px solid #D2D2D2;
+  margin-top: 20px;
+  position: relative;
+}
+.tou h1{
+  float: left;
+  font-weight: normal;
+}
+.tou h3{
+  float: right;
+  font-weight: normal;
+  line-height: 50px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.tou .tab{
+  position: absolute;
+  right: 55px;
+  top: -30px;
+  z-index: 999;
+  width: 360px;
+  height: 235px;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+}
+.tab .tab-in{
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 350px;
+  height: 225px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+}
+.tou:after{
+  display: block;
+  content: '';
+  clear:both;
+}
+.nk{
+  margin-left: 17px;
+  margin-top: 20px;
+  width: 316px;
+/*  background: #ccc;*/
+}
+.nk .nk-input{
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 15px;
+  box-sizing:border-box;
+}
+.ys{
+  height: 60px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.xia{
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  padding:0 15px;
+  box-sizing:border-box;
+}
+.xia span{
+  cursor: pointer;
+}
+.xia .del{
+  color: #FF3B30;
+  float: left;
+}
+.xia .cancel{
+  float: right;
+  color: #3B98FF;
+  margin-right: 20px;
+}
+.xia .wanc{
+  color: #007AFF;
+  float: right;
+  margin-left: 20px;
+  font-weight: 700;
+  font-family: "微软雅黑";
+}
+.com .sjx-in{
+  display:block;
+  float: left;
+  margin: 0 10px;
+  margin-top: 13px;
+  width: 20px;
+  height: 20px;
+  background: url(../imgs/packed-5.png) no-repeat -100px -500px;
+}
+.com .sjx-out{
+  display:block;
+  float: left;
+  margin: 0 10px;
+  margin-top: 13px;
+  width: 20px;
+  height: 20px;
+  background: url(../imgs/packed-5.png) no-repeat -26px -528px;
+}
+.com>div{
+  /*border-bottom: 1px solid #d2d2d2;*/
+  padding: 10px 0;
+  font-size: 20px;
+  color:#999999;
+}
+.com-li{
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #D2D2D2;
+  /*border-bottom: 1px solid #D2D2D2;*/
+  line-height: 50px;
+  color: #999;
+}
+.quan{
+  margin-top: 10px;
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #c16bd8;
+  padding: 3px;
+  border: 2px solid #c16bd8;
+  background-clip:content-box; 
+  margin-right: 10px;
+  cursor: pointer;
+}
+.date{
+  float: right;
+}
+.new{
+  height: 50px;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  font-size: 20px;
+  color: #999;
+  line-height: 50px;
+}
+.shuru{
+  height: 50px;
+  border: 0;
+  float: left;
+  padding: 0 5px;
+  width: 80%;
+  font-size: 20px;
+  color: #333;
+}

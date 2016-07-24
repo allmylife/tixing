@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="contain" ng-controller="myctr">
+        <div class="left">
+            <div class="title">
+                <a href="" class="logo">iCloud</a>
+                <div class="add" ng-click="add()">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <ul class="content">
+                <li class="list" ng-click="select($index)" ng-style="{background:$index==index?'#2D2D28':''}"  ng-repeat="v in todo">
+                    <span class="dian" ng-style="{background:v.color}"></span>
+                    <h4 class='nr'>{{v.title}}</h4>
+                </li>
+               
+            </ul>
+        </div>
+        <div class="right">
+            <div class="top">
+                <input type="text" class="ss">
+            </div>
+            <div class="bottom">
+                <div class="tou">   
+                    <h1 ng-style="{color:todo[index].color}">{{todo[index].title}}</h1>
+                    <h3 ng-style="{color:todo[index].color}" ng-click="getColor(index)">选项</h3>
+                    <div class="tab" ng-show="f" > 
+                        <div class="tab-in">
+                            <div class="nk">
+                                
+                                <input class="nk-input" ng-model="wz" ng-style="{color:fontColor}" contenteditable>
+                                <p style="margin:15px 0">列表颜色</p>
+                                <ul class="ys">
+                                    <li ng-repeat="c in color" class="quan" style="width:25px;height:25px" ng-style="{'border-color':c==fontColor?c:'transparent','background-color':c}" ng-click="changeColor(c)"></li>
+                                </ul>
+                                <div class="xia">
+                                    <span class='del' ng-click="del(index)">删除</span>
+                                    <span class="wanc" ng-click="save(index)">完成</span>
+                                    <span style="width:1px;height:20px;background:#E5E5E5;float:right;margin-top:10px;"></span>
+                                    <span class="cancel" ng-click="cancel()">取消</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 已完成 -->
+                <div class="com">
+                    <a href="javascript:;" ng-class="{true:'sjx-in',false:'sjx-out'}[flag]" ng-click="flag=!flag"></a>
+                    <div>已完成 : {{comNum}}项</div>
+                        <ul  ng-hide="flag">
+                            <li ng-repeat="v in todo[index].list | filter:true " class="com-li">
+                                <span class="quan"  ng-style="{'background-color':todo[index].color,'border-color':todo[index].color}" ng-click="changeStatus(v,false)"></span>
+                                <input class='shuru' ng-model="v.content" contenteditable>
+                                <span class="date">{{v.date | date:'yyyy-MM-dd'}}</span>
+                            </li>
+                        </ul>
+                </div>
+                <!-- 未完成 -->
+                <div class='now'>
+                        <ul>
+                            <li ng-repeat="v in todo[index].list | filter:false " class="com-li">
+                                <span class="quan"  ng-style="{'background-color':'rgba(0,0,0,0)','border-color':todo[index].color}" ng-click="changeStatus(v,true)"></span>
+                                 <input class='shuru' ng-model="v.content" contenteditable>
+                                <span class="date">{{v.date | date:'yyyy-MM-dd'}}</span>
+                            </li>
+                        </ul>
+                </div>
+                <!-- 新项目 -->
+                <div class="new" ng-click="addList()">
+                    <span class="quan"  ng-style="{'background-color':'rgba(0,0,0,0)','border-color':'rgba(0,0,0,0)'}"></span>
+                    新项目
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
